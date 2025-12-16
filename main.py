@@ -27,13 +27,13 @@ def new_pa():
     if user8:
         return jsonify({"message": "Username And Password Saved"}), 200
     else:
-        return jsonify({"message": "Username And Password Not Saved"}), 401
+        return jsonify({"message": "Username And Password Not Saved"}), 200
 
 @app.route("/get_text", methods=["GET"])
 def get_text():
     text = request.args.get("text")
     if not text:
-        return jsonify({"message": "Text Not Found"}), 404
+        return jsonify({"message": "Text Not Found"}), 200
 
     # Remove extra quotes if any
     text = text.strip('"')
@@ -47,3 +47,4 @@ def get_text():
 if __name__ == '__main__':
 
     app.run(debug=True)
+

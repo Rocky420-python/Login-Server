@@ -17,7 +17,7 @@ def login():
     if user1:
         return jsonify({"message": "Login Successful"}), 200
     else:
-        return jsonify({"message": "Login Unsuccessful"}), 401
+        return jsonify({"message": "Login Unsuccessful"}), 200
 
 @app.route('/new_pa', methods=['GET'])
 def new_pa():
@@ -45,4 +45,5 @@ def get_text():
     return jsonify({"response": response}), 200
 
 if __name__ == '__main__':
+
     app.run(debug=True)

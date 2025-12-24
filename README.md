@@ -20,7 +20,7 @@ This is a **mini login server** built with **Python**, **Flask**, **bcrypt**, an
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/mini-login-server.git
+git clone https://github.com/yourusername/mini-login-server.git](https://github.com/Rocky420-python/Login-Server.git
 cd mini-login-server
 
 Create a virtual environment:

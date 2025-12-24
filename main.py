@@ -51,14 +51,13 @@ def login():
 def register():
     username = request.args.get("username")
     password = request.args.get("password")
-    email = request.args.get("email")
+    
 
     if not username:
         return jsonify({"message": "Please enter your username."})
     if not password:
         return jsonify({"message": "Please enter your Password."})
-    if not email:
-        return jsonify({"message": "Please enter your email."})
+    
 
     if len(username) < 7 or len(username) > 8:
         return jsonify({"message": "Username must be between 7 and 8 characters long."})
@@ -187,4 +186,5 @@ def fix_code():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
